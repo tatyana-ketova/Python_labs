@@ -27,33 +27,54 @@ class Vehicle:
         self.year = year
 
     def start(self):
+        print(self.model+ " start... vr....vr....vr.." )
         pass
     def stop(self):
-        pass
+        print(self.model + " stop... shhh.....")
 
     def fuel_up(self):
-        pass
+        print(self.model + " om....om...ful!!!!")
 
 class Car(Vehicle):
-    def __init__(self,num_doors):
+    def __init__(self, model, year, num_doors):
+        Vehicle.__init__(self, model, year)
         self.num_doors = num_doors
 
     def honkhorn(self):
-        pass
+        print( self.model + " bip bip")
 
 
 class Bicycle(Vehicle):
-    def __init__(self, num_gears):
+    def __init__(self, model, year, num_gears):
+        Vehicle.__init__(self,model,year)
         self.num_gears = num_gears
 
     def ringbell(self):
-        pass
+        print(self.model + " dzin dzin")
 
 class Motorcycle(Vehicle):
-    def __init__(self,cradle):
+    def __init__(self,model, year, cradle):
+        Vehicle.__init__(self, model, year)
         self.cradle = cradle
 
     def honkhorn(self):
-        pass
+        print(self.model + " bio bip")
+
+
+MyCar = Car("Tesla",2021, 4)
+MyMotobike = Motorcycle('Breddy', 2018,"no")
+MyBicycle = Bicycle('Cargo',2023,8)
+MyCar.start()
+MyCar.stop()
+MyCar.fuel_up()
+MyCar.honkhorn()
+MyBicycle.start()
+MyBicycle.stop()
+MyBicycle.fuel_up()
+MyBicycle.ringbell()
+MyMotobike.start()
+MyMotobike.stop()
+MyMotobike.fuel_up()
+MyMotobike.honkhorn()
 
 
